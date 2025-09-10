@@ -11,7 +11,7 @@ jobs:
       - name: Add issue to GitHub Project
         uses: actions/github-script@v7
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.ACTIONS_TOKEN }}
           script: |
             // Replace with your project number and org/user
             const projectNumber = 2; // your project number
