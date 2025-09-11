@@ -21,6 +21,8 @@ body:
 
         Issues/PRs liés:
         - 
+    validations:
+      required: true
 
   - type: checkboxes
     id: type
@@ -33,18 +35,21 @@ body:
         - label: Refactorisation du code
         - label: Ajout/modification de workflows
         - label: Ajout/modification des modèles (tâches, PR, release, etc.)
+    validations:
+      required: true
 
   - type: textarea
     id: scope
     attributes:
       label: Périmètre (scope)
       description: Quelles actions doivent être faites?
+    validations:
+      required: true
 
   - type: textarea
-    id: out_of_scope
+    id: additional
     attributes:
-      label: Hors périmètre (out of scope)
-      description: Ce qui n'est pas inclus explicitement.
+      label: Information supplémentaire / captures d'écran (optionnel)
 
   - type: dropdown
     id: priority

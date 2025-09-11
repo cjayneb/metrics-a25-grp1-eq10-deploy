@@ -17,7 +17,7 @@ body:
     attributes:
       label: Problème / motivation
       description: Quel problème ou quelle motivation cela résout-il ?
-      placeholder: Avec l’état actuel de l’application, il y a un problème où...
+      placeholder: Avec l'état actuel de l'application, il y a un problème où...
     validations:
       required: true
 
@@ -59,4 +59,4 @@ body:
   - type: textarea
     id: additional
     attributes:
-      label: Contexte supplémentaire / captures d’écran (optionnel)
+      label: Information supplémentaire / captures d'écran (optionnel)
