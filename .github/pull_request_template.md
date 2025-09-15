@@ -1,9 +1,6 @@
 # Résumé
 Décrivez brièvement l’objectif de cette PR (le **pourquoi**).
 
-## Lié à
-Closes/Fixes/Relates: #NUMÉRO_ISSUE (e.g.:git `Closes #123`)
-
 ## Type de changement
 - [ ] feat (nouvelle fonctionnalité)
 - [ ] fix (correction de bug)
