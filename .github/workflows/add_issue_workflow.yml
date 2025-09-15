@@ -1,4 +1,4 @@
-name: Add issue to user project
+name: Add issue to project
 
 on:
   issues:
@@ -11,43 +11,34 @@ jobs:
       issues: write
       repository-projects: write
       contents: read
-
     steps:
       - name: Add issue to project
         uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.ACTIONS_TOKEN }}
           script: |
-            // 1. Get the project ID
-            const queryProject = `
+            // Get the project ID for the user project #2
+            const projectQuery = `
               query($login: String!, $number: Int!) {
                 user(login: $login) {
-                  projectV2(number: $number) {
-                    id
-                  }
+                  projectV2(number: $number) { id }
                 }
               }
             `;
-            const variablesProject = {
-              login: context.repo.owner,
-              number: 2 // change to your project number
-            };
-            const project = await github.graphql(queryProject, variablesProject);
+            const projectVars = { login: context.repo.owner, number: 2 };
+            const project = await github.graphql(projectQuery, projectVars);
             const projectId = project.user.projectV2.id;
 
-            // 2. Add the issue to the project
-            const mutation = `
+            // Add the issue to the project
+            const addMutation = `
               mutation($projectId: ID!, $contentId: ID!) {
                 addProjectV2ItemById(input: {projectId: $projectId, contentId: $contentId}) {
-                  item {
-                    id
-                  }
+                  item { id }
                 }
               }
             `;
-            const variables = {
-              projectId: projectId,
+            await github.graphql(addMutation, {
+              projectId,
               contentId: context.payload.issue.node_id
-            };
-            await github.graphql(mutation, variables);
-            console.log("✅ Issue added to project");
+            });
+            console.log("Issue added to project");
