@@ -25,21 +25,8 @@ def home():
 @app.route("/issues", methods=["GET"])
 def get_issues():
     """Return issues of the repo"""
-    r = requests.get(f"{API_URL}/issues", headers=headers)
+    r = requests.get(f"{API_URL}/issues?state=all", headers=headers)
     return jsonify(r.json())
-
-@app.route("/pulls", methods=["GET"])
-def get_pulls():
-    """Return pull requests of the repo"""
-    r = requests.get(f"{API_URL}/pulls", headers=headers)
-    return jsonify(r.json())
-
-@app.route("/metrics/completed", methods=["GET"])
-def completed_tasks():
-    """Return number of closed issues"""
-    r = requests.get(f"{API_URL}/issues?state=closed", headers=headers)
-    issues = r.json()
-    return jsonify({"completed_count": len(issues)})
 
 if __name__ == "__main__":
     app.run(debug=True)
