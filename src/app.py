@@ -5,10 +5,13 @@
 from flask import Flask, jsonify
 import requests
 import os
+from dotenv import load_dotenv
 
+load_dotenv() 
 app = Flask(__name__)
 
 # set le token dans une variable locale
+
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 
 API_URL = f"https://api.github.com/repos/cjayneb/metrics-a25-grp1-eq10"
