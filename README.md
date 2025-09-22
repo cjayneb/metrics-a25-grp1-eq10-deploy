@@ -79,5 +79,5 @@ Pour contribuer à ce projet, se référer au document [CONTRIBUTING.md](./CONTR
 ## Auteurs
 
 - [Adam Mihajlovic](https://github.com/Funnyadd)
-- [Jean-Christophe Benoit](https://github.com/cjayneb)
+- [Jean-Christophe Benoît](https://github.com/cjayneb)
 - [Jethro Roy](https://github.com/JethroRoy)
