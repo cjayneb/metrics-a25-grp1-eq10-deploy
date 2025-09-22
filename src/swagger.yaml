@@ -7,7 +7,7 @@ paths:
     get:
       summary: Home route
       responses:
-        '200':
+        "200":
           description: API is running
           content:
             application/json:
@@ -20,8 +20,8 @@ paths:
     get:
       summary: Get all issues
       responses:
-        '200':
-          description: List of issues
+        200:
+          description: Successful response with a list of issues
           content:
             application/json:
               schema:
@@ -31,7 +31,98 @@ paths:
                   properties:
                     id:
                       type: integer
+                      example: 3442292533
+                    number:
+                      type: integer
+                      example: 28
                     title:
                       type: string
-                    url:
+                      example: "chore: Workflow Intégration Continue"
+                    state:
                       type: string
+                      enum: [open, closed]
+                      example: "open"
+                    body:
+                      type: string
+                      description: Issue description in markdown
+                    user:
+                      $ref: "#/components/schemas/User"
+                    assignee:
+                      $ref: "#/components/schemas/User"
+                    assignees:
+                      type: array
+                      items:
+                        $ref: "#/components/schemas/User"
+                    labels:
+                      type: array
+                      items:
+                        $ref: "#/components/schemas/Label"
+                    milestone:
+                      $ref: "#/components/schemas/Milestone"
+                    created_at:
+                      type: string
+                      format: date-time
+                    updated_at:
+                      type: string
+                      format: date-time
+                    closed_at:
+                      type: string
+                      format: date-time
+                      nullable: true
+                    html_url:
+                      type: string
+                      format: uri
+
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+        login:
+          type: string
+        html_url:
+          type: string
+          format: uri
+        avatar_url:
+          type: string
+          format: uri
+        type:
+          type: string
+          example: "User"
+
+    Label:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        color:
+          type: string
+        description:
+          type: string
+
+    Milestone:
+      type: object
+      properties:
+        id:
+          type: integer
+        number:
+          type: integer
+        title:
+          type: string
+        description:
+          type: string
+        state:
+          type: string
+        due_on:
+          type: string
+          format: date-time
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
