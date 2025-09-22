@@ -4,7 +4,7 @@ Merci de votre intérêt pour ce projet!\
 Ce guide explique comment proposer des idées, signaler des bugs et soumettre des modifications.
 
 ## Avant de commencer
-- Lisez le [README](./README.md), bien entendu, pour savoir commenter installer et démarrer le projet localement.
+- Lisez le [README](./README.md), bien entendu, pour savoir comment installer et démarrer le projet localement.
 - Recherchez dans les **Issues** et **Pull Requests** existantes pour éviter les doublons.
 
 ## Signaler un bug
@@ -53,8 +53,10 @@ Ce guide explique comment proposer des idées, signaler des bugs et soumettre de
 - Suivez les conventions de style.
 
 ## Sécurité
-- Ne divulguez pas de vulnérabilités publiquement.
-- Utilisez [Security Advisories](https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability) de GitHub.
+- Ne divulguez pas de secrets publiquement.\
+Utilisez les secrets du répertoire de code.
+- Ne divulguez pas de vulnérabilités publiquement.\
+Utilisez [Security Advisories](https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability) de GitHub.
 
 ## Remerciements
 > Merci à toutes les contributrices et tous les contributeurs!
