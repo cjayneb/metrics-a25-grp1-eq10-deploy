@@ -35,9 +35,10 @@ jobs:
 
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
           pip install -r requirements.txt
 
       - name: Run tests with coverage
         run: |
           python -m pytest --cov=src --cov-fail-under=95
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_API_PAT }}
