@@ -10,6 +10,7 @@ Répertoire de code pour la compagnie MTL-MobilitySoft dans le cadre du cours LO
 Afin de faire fonctionner ce projet sur votre machine, il est important d'avoir les outils suivants d'installés :
 
 - Python 3.13.7
+- NPM
 
 ## Installation
 
@@ -68,6 +69,28 @@ Cela démarre le serveur Flask sur http://127.0.0.1:5000.
 
 Ce rapport permet de voir exactement quelle partie du code manque de tests.
 
+## Déployer le projet
+
+1. **Installez Vercel CLI**
+
+   ```bash
+      npm i -g vercel
+   ```
+
+2. **Connectez-vous à Vercel**
+
+   ```bash
+      vercel login
+   ```
+
+3. **Déployer l'application sur Vercel**
+
+   ```bash
+      vercel .
+   ```
+
+   Cliquez sur le lien _Preview_ pour voir l'application dans votre naviguateur.
+
 ## Documentation
 
 Se référer à la documentation officielle du projet située dans le [Wiki](https://github.com/cjayneb/metrics-a25-grp1-eq10/wiki).
@@ -81,3 +104,7 @@ Pour contribuer à ce projet, se référer au document [CONTRIBUTING.md](./CONTR
 - [Adam Mihajlovic](https://github.com/Funnyadd)
 - [Jean-Christophe Benoît](https://github.com/cjayneb)
 - [Jethro Roy](https://github.com/JethroRoy)
+
+```
+
+```
