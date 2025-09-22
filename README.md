@@ -1,28 +1,83 @@
 # Metrics A25
 
-**Groupe**: 01\
+**Groupe**: 01 |
 **Équipe**: 10
 
 Répertoire de code pour la compagnie MTL-MobilitySoft dans le cadre du cours LOG680 - Introduction à l'approche DevOps.
 
 ## Pré-requis
-Afin de faire fonctionner ce projet sur votre machine, il est important d'avoir les outils suivants d'installés:
-- Python 3.x
-- ...
+
+Afin de faire fonctionner ce projet sur votre machine, il est important d'avoir les outils suivants d'installés :
+
+- Python 3.13.7
 
 ## Installation
-Ajouter des instructions pour l'installation initiale du projet...
+
+1. **Cloner le dépôt de code**
+
+   ```bash
+   git clone https://github.com/<your-org-or-user>/metrics-a25-grp1-eq10.git
+   cd metrics-a25-grp1-eq10
+   ```
+
+2. **Créer et activer un environnement virtuel**
+
+   ```bash
+    python -m venv .venv
+    source .venv/bin/activate   # Sur Linux/Mac
+    .venv\Scripts\activate      # Sur Windows
+   ```
+
+3. **Installer les dépendances**
+
+   ```bash
+    pip install -r requirements.txt
+   ```
+
+4. **Configurer les variables d'environnement**<br>
+   Créez un fichier .env à la racine du projet avec votre jeton GitHub :
+   ```env
+    GITHUB_TOKEN=your_personal_access_token
+   ```
 
 ## Exécuter le projet
-Ajouter des instructions sur la façon dont on peut exécuter le projet sur sa machine locale...
+
+### Lancer l'API localement avec Python
+
+```bash
+    python src/app.py
+```
+
+Cela démarre le serveur Flask sur http://127.0.0.1:5000.
+
+- Racine de l'API : http://127.0.0.1:5000/
+- Endpoint des issues : http://127.0.0.1:5000/issues
+- Documentation Swagger : http://127.0.0.1:5000/docs
+
+### Lancer les test unitaires et d'intégration avec couverture de code
+
+```bash
+    python -m pytest --cov=src
+```
+
+### Générer un rapport HTML de couverture de code
+
+```bash
+    coverage html
+```
+
+Ce rapport permet de voir exactement quelle partie du code manque de tests.
 
 ## Documentation
+
 Se référer à la documentation officielle du projet située dans le [Wiki](https://github.com/cjayneb/metrics-a25-grp1-eq10/wiki).
 
 ## Contribuer au projet
+
 Pour contribuer à ce projet, se référer au document [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 ## Auteurs
+
 - [Adam Mihajlovic](https://github.com/Funnyadd)
 - [Jean-Christophe Benoit](https://github.com/cjayneb)
 - [Jethro Roy](https://github.com/JethroRoy)
