@@ -1,7 +1,6 @@
 # Metrics A25
 
-**Groupe**: 01 |
-**Équipe**: 10
+**Groupe**: 01 | **Équipe**: 10
 
 Répertoire de code pour la compagnie MTL-MobilitySoft dans le cadre du cours LOG680 - Introduction à l'approche DevOps.
 
@@ -12,14 +11,10 @@ Afin de faire fonctionner ce projet sur votre machine, il est important d'avoir 
 - Python 3.13.7
 - NPM
 
-## Installation
-
-1. **Cloner le dépôt de code**
-
-   ```bash
-   git clone https://github.com/<your-org-or-user>/metrics-a25-grp1-eq10.git
-   cd metrics-a25-grp1-eq10
-   ```
+  ```bash
+  git clone https://github.com/cjayneb/metrics-a25-grp1-eq10.git
+  cd metrics-a25-grp1-eq10
+  ```
 
 2. **Créer et activer un environnement virtuel**
 
@@ -35,8 +30,8 @@ Afin de faire fonctionner ce projet sur votre machine, il est important d'avoir 
     pip install -r requirements.txt
    ```
 
-4. **Configurer les variables d'environnement**<br>
-   Créez un fichier .env à la racine du projet avec votre jeton GitHub :
+4. **Configurer les variables d'environnement**\
+   Créez un fichier `.env` à la racine du projet avec votre jeton GitHub :
    ```env
     GITHUB_TOKEN=your_personal_access_token
    ```
