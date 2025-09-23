@@ -1,14 +1,14 @@
 openapi: 3.0.0
 info:
-  title: Kanban Metrics API
+  title: API de Métriques Kanban
   version: 1.0.0
 paths:
   /:
     get:
-      summary: Home route
+      summary: Route de base
       responses:
-        "200":
-          description: API is running
+        200:
+          description: L'API fonctionne correctement
           content:
             application/json:
               schema:
@@ -18,10 +18,10 @@ paths:
                     type: string
   /issues:
     get:
-      summary: Get all issues
+      summary: Récupérer les issues d'un dépôt GitHub
       responses:
         200:
-          description: Successful response with a list of issues
+          description: Réponse réussie avec la liste des issues
           content:
             application/json:
               schema:
@@ -44,7 +44,7 @@ paths:
                       example: "open"
                     body:
                       type: string
-                      description: Issue description in markdown
+                      description: Description de l'issuen (texte en markdown)
                     user:
                       $ref: "#/components/schemas/User"
                     assignee:
