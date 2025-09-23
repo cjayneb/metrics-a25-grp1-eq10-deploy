@@ -9,7 +9,7 @@ Répertoire de code pour la compagnie MTL-MobilitySoft dans le cadre du cours LO
 Afin de faire fonctionner ce projet sur votre machine, il est important d'avoir les outils suivants d'installés :
 
 - Python 3.13.7
-- NPM
+- NPM 8.19.4
 
   ```bash
   git clone https://github.com/cjayneb/metrics-a25-grp1-eq10.git
