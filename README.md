@@ -31,7 +31,7 @@ Afin de faire fonctionner ce projet sur votre machine, il est important d'avoir 
    ```
 
 4. **Configurer les variables d'environnement**\
-   Créez un fichier `.env` à la racine du projet avec votre jeton GitHub :
+   Créer un fichier `.env` à la racine du projet avec votre jeton GitHub :
    ```env
     GITHUB_TOKEN=your_personal_access_token
    ```
@@ -66,19 +66,19 @@ Ce rapport permet de voir exactement quelle partie du code manque de tests.
 
 ## Déployer le projet
 
-Le déploiement automatique devrait se faire par Vercel à chaque fois que vous poussez des changements sur une branche. Tous les déploiments sont accessible à partir de cette page : https://vercel.com/cjaynebs-projects/metrics-a25-grp1-eq10/deployments
+Le déploiement automatique est fait par **Vercel** à chaque fois que vous poussez des changements sur une branche. Tous les déploiements sont accessibles à partir de cette page : https://vercel.com/cjaynebs-projects/metrics-a25-grp1-eq10/deployments
 
-> **_NOTE:_** Demandez l'accès à [Jean-Christophe Benoît](https://github.com/cjayneb)
+> **_NOTE:_** Demander l'accès à [Jean-Christophe Benoît](https://github.com/cjayneb)
 
 Cependant, il est aussi possible de faire un déploiement manuel du code poussé de votre branche actuelle en suivant les étapes suivantes :
 
-1. **Installez Vercel CLI**
+1. **Installer Vercel CLI**
 
    ```bash
       npm i -g vercel
    ```
 
-2. **Connectez-vous à Vercel**
+2. **Se connecter à Vercel**
 
    ```bash
       vercel login
@@ -90,7 +90,7 @@ Cependant, il est aussi possible de faire un déploiement manuel du code poussé
       vercel .
    ```
 
-   Cliquez sur le lien _Preview_ pour voir l'application dans votre naviguateur.
+   Cliquer sur le lien _Preview_ pour voir l'application dans votre naviguateur.
 
 ## Documentation
 
@@ -105,7 +105,3 @@ Pour contribuer à ce projet, se référer au document [CONTRIBUTING.md](./CONTR
 - [Adam Mihajlovic](https://github.com/Funnyadd)
 - [Jean-Christophe Benoît](https://github.com/cjayneb)
 - [Jethro Roy](https://github.com/JethroRoy)
-
-```
-
-```
