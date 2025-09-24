@@ -12,7 +12,7 @@
           - name: Sync Fork
             uses: tgymnich/fork-sync@v1.2.0 # Use a specific version of the action
             with:
-              owner: cjayneb # Your GitHub username
+              owner: log680-mtl-mobilitysoft # Your GitHub username
               base: main # The branch in your fork to update
               head: main # The branch in the upstream to pull from
               github_token: ${{ secrets.GH_TOKEN }} # GitHub Token for authentication
