@@ -1,0 +1,18 @@
+    name: Sync Fork
+
+    on:
+      schedule:
+        - cron: '*/5 * * * *' # Runs every 5 minutes
+      workflow_dispatch: # Allows manual triggering
+
+    jobs:
+      sync:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Sync Fork
+            uses: tgymnich/fork-sync@v1.2.0 # Use a specific version of the action
+            with:
+              owner: 'cjayneb' # Your GitHub username
+              base: 'main' # The branch in your fork to update
+              head: 'main' # The branch in the upstream to pull from
+              token: ${{ secrets.GH_TOKEN }} # GitHub Token for authentication
