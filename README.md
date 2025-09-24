@@ -16,28 +16,29 @@ Afin de faire fonctionner ce projet sur votre machine, il est important d'avoir 
 1. **Cloner le dépôt de code**
 
    ```bash
-    git clone https://github.com/cjayneb/metrics-a25-grp1-eq10.git
-    cd metrics-a25-grp1-eq10
+   git clone https://github.com/log680-mtl-mobilitysoft/metrics-a25-grp1-eq10.git
+   cd metrics-a25-grp1-eq10
    ```
 
 2. **Créer et activer un environnement virtuel**
 
    ```bash
-    python -m venv .venv
-    source .venv/bin/activate   # Sur Linux/Mac
-    .venv\Scripts\activate      # Sur Windows
+   python -m venv .venv
+   source .venv/bin/activate   # Sur Linux/Mac
+   .venv\Scripts\activate      # Sur Windows
    ```
 
 3. **Installer les dépendances**
 
    ```bash
-    pip install -r requirements.txt
+   pip install -r requirements.txt
    ```
 
-4. **Configurer les variables d'environnement**\
+4. **Configurer les variables d'environnement**
+
    Créer un fichier `.env` à la racine du projet avec votre jeton GitHub :
    ```env
-    GITHUB_TOKEN=your_personal_access_token
+   GITHUB_TOKEN=your_personal_access_token
    ```
 
 ## Exécuter le projet
@@ -45,7 +46,7 @@ Afin de faire fonctionner ce projet sur votre machine, il est important d'avoir 
 ### Lancer l'API localement avec Python
 
 ```bash
-    python src/app.py
+python src/app.py
 ```
 
 Cela démarre le serveur Flask sur http://127.0.0.1:5000.
@@ -57,13 +58,13 @@ Cela démarre le serveur Flask sur http://127.0.0.1:5000.
 ### Lancer les test unitaires et d'intégration avec couverture de code
 
 ```bash
-    python -m pytest --cov=src
+python -m pytest --cov=src
 ```
 
 ### Générer un rapport HTML de couverture de code
 
 ```bash
-    coverage html
+coverage html
 ```
 
 Ce rapport permet de voir exactement quelle partie du code manque de tests.
@@ -74,33 +75,34 @@ Le déploiement automatique est fait par **Vercel** à chaque fois que vous pous
 \
 Le seul déploiement public est celui de la branche `main` disponible via https://metrics-a25-grp1-eq10-git-main-cjaynebs-projects.vercel.app/docs
 
-> **_NOTE:_** Les déploiements des branches de développement sont seulement disponible pour le propriétaire du compte Vercel, car la version gratuite de Vercel ne permet pas de créer une équipe. Demander à [Jean-Christophe Benoît](https://github.com/cjayneb) si vous voulez vérifier votre déploiement de développement.
+> [!note]
+> Les déploiements des branches de développement sont seulement disponible pour le propriétaire du compte Vercel, car la version gratuite de Vercel ne permet pas de créer une équipe. Demander à [Jean-Christophe Benoît](https://github.com/cjayneb) si vous voulez vérifier votre déploiement de développement.
 
 Cependant, il est aussi possible de faire un déploiement manuel du code poussé de votre branche actuelle en suivant les étapes suivantes :
 
 1. **Installer Vercel CLI**
 
    ```bash
-      npm i -g vercel
+   npm i -g vercel
    ```
 
 2. **Se connecter à Vercel**
 
    ```bash
-      vercel login
+   vercel login
    ```
 
 3. **Déployer l'application sur Vercel**
 
    ```bash
-      vercel .
+   vercel .
    ```
 
    Cliquer sur le lien _Preview_ pour voir l'application dans votre naviguateur.
 
 ## Documentation
 
-Se référer à la documentation officielle du projet située dans le [Wiki](https://github.com/cjayneb/metrics-a25-grp1-eq10/wiki).
+Se référer à la documentation officielle du projet située dans le dossier [docs](./docs/Accueil.md) du dépôt.
 
 ## Contribuer au projet
 
