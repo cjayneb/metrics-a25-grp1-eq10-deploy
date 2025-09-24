@@ -9,15 +9,12 @@ Répertoire de code pour la compagnie MTL-MobilitySoft dans le cadre du cours LO
 Afin de faire fonctionner ce projet sur votre machine, il est important d'avoir les outils suivants d'installés :
 
 - Python 3.13.7
+- NPM 8.19.4
 
-## Installation
-
-1. **Cloner le dépôt de code**
-
-   ```bash
-   git clone https://github.com/cjayneb/metrics-a25-grp1-eq10.git
-   cd metrics-a25-grp1-eq10
-   ```
+  ```bash
+  git clone https://github.com/cjayneb/metrics-a25-grp1-eq10.git
+  cd metrics-a25-grp1-eq10
+  ```
 
 2. **Créer et activer un environnement virtuel**
 
@@ -34,7 +31,7 @@ Afin de faire fonctionner ce projet sur votre machine, il est important d'avoir 
    ```
 
 4. **Configurer les variables d'environnement**\
-   Créez un fichier `.env` à la racine du projet avec votre jeton GitHub :
+   Créer un fichier `.env` à la racine du projet avec votre jeton GitHub :
    ```env
     GITHUB_TOKEN=your_personal_access_token
    ```
@@ -67,6 +64,34 @@ Cela démarre le serveur Flask sur http://127.0.0.1:5000.
 
 Ce rapport permet de voir exactement quelle partie du code manque de tests.
 
+## Déployer le projet
+
+Le déploiement automatique est fait par **Vercel** à chaque fois que vous poussez des changements sur une branche. Tous les déploiements sont accessibles à partir de cette page : https://vercel.com/cjaynebs-projects/metrics-a25-grp1-eq10/deployments
+
+> **_NOTE:_** Demander l'accès à [Jean-Christophe Benoît](https://github.com/cjayneb)
+
+Cependant, il est aussi possible de faire un déploiement manuel du code poussé de votre branche actuelle en suivant les étapes suivantes :
+
+1. **Installer Vercel CLI**
+
+   ```bash
+      npm i -g vercel
+   ```
+
+2. **Se connecter à Vercel**
+
+   ```bash
+      vercel login
+   ```
+
+3. **Déployer l'application sur Vercel**
+
+   ```bash
+      vercel .
+   ```
+
+   Cliquer sur le lien _Preview_ pour voir l'application dans votre naviguateur.
+
 ## Documentation
 
 Se référer à la documentation officielle du projet située dans le [Wiki](https://github.com/cjayneb/metrics-a25-grp1-eq10/wiki).
@@ -78,5 +103,5 @@ Pour contribuer à ce projet, se référer au document [CONTRIBUTING.md](./CONTR
 ## Auteurs
 
 - [Adam Mihajlovic](https://github.com/Funnyadd)
-- [Jean-Christophe Benoit](https://github.com/cjayneb)
+- [Jean-Christophe Benoît](https://github.com/cjayneb)
 - [Jethro Roy](https://github.com/JethroRoy)
