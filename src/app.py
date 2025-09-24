@@ -37,15 +37,24 @@ def get_issues():
     result = []
 
     for issue in issues:
+        milestone = issue.get("milestone")
         temp_issue = {
             "id": issue.get("id"),
             "number": issue.get("number"),
             "title": issue.get("title"),
             "state": issue.get("state"),
+            "user": issue["user"]["login"] if issue.get("user") else None,
+            "assignees": [a["login"] for a in issue.get("assignees", [])],
+            "labels": [lbl["name"] for lbl in issue.get("labels", [])],
+            "milestone": {
+                "number": milestone.get("number"),
+                "title": milestone.get("title"),
+                "state": milestone.get("state"),
+                "due_on": milestone.get("due_on"),
+            } if milestone else None,
             "created_at": issue.get("created_at"),
             "updated_at": issue.get("updated_at"),
             "closed_at": issue.get("closed_at"),
-            "labels": [lbl["name"] for lbl in issue.get("labels", [])]
         }
         result.append(temp_issue)
 
