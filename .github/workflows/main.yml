@@ -15,4 +15,4 @@
               owner: cjayneb # Your GitHub username
               base: main # The branch in your fork to update
               head: main # The branch in the upstream to pull from
-              token: ${{ secrets.GH_TOKEN }} # GitHub Token for authentication
+              github_token: ${{ secrets.GH_TOKEN }} # GitHub Token for authentication
