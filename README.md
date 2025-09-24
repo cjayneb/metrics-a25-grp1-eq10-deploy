@@ -11,10 +11,14 @@ Afin de faire fonctionner ce projet sur votre machine, il est important d'avoir 
 - Python 3.13.7
 - NPM 8.19.4
 
-  ```bash
-  git clone https://github.com/cjayneb/metrics-a25-grp1-eq10.git
-  cd metrics-a25-grp1-eq10
-  ```
+## Installation
+
+1. **Cloner le dépôt de code**
+
+   ```bash
+    git clone https://github.com/cjayneb/metrics-a25-grp1-eq10.git
+    cd metrics-a25-grp1-eq10
+   ```
 
 2. **Créer et activer un environnement virtuel**
 
