@@ -32,7 +32,24 @@ def home():
 @app.route("/issues", methods=["GET"])
 def get_issues():
     r = requests.get(f"{GITHUB_API_URL}/issues?state=all", headers=HEADERS)
-    return jsonify(r.json())
+    issues = r.json()
+
+    result = []
+
+    for issue in issues:
+        temp_issue = {
+            "id": issue.get("id"),
+            "number": issue.get("number"),
+            "title": issue.get("title"),
+            "state": issue.get("state"),
+            "created_at": issue.get("created_at"),
+            "updated_at": issue.get("updated_at"),
+            "closed_at": issue.get("closed_at"),
+            "labels": [lbl["name"] for lbl in issue.get("labels", [])]
+        }
+        result.append(temp_issue)
+
+    return jsonify(result)
 
 if __name__ == "__main__": # pragma: no cover (do not consider for code coverage)
     app.run()
