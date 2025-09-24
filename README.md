@@ -70,9 +70,11 @@ Ce rapport permet de voir exactement quelle partie du code manque de tests.
 
 ## Déployer le projet
 
-Le déploiement automatique est fait par **Vercel** à chaque fois que vous poussez des changements sur une branche. Tous les déploiements sont accessibles à partir de cette page : https://vercel.com/cjaynebs-projects/metrics-a25-grp1-eq10/deployments
+Le déploiement automatique est fait par **Vercel** à chaque fois que vous poussez des changements sur une branche. Tous les déploiements sont accessibles à partir de cette page : https://vercel.com/cjaynebs-projects/metrics-a25-grp1-eq10/deployments \
+\
+Le seul déploiement public est celui de la branche `main` disponible via https://metrics-a25-grp1-eq10-git-main-cjaynebs-projects.vercel.app/docs
 
-> **_NOTE:_** Demander l'accès à [Jean-Christophe Benoît](https://github.com/cjayneb)
+> **_NOTE:_** Les déploiements des branches de développement sont seulement disponible pour le propriétaire du compte Vercel, car la version gratuite de Vercel ne permet pas de créer une équipe. Demander à [Jean-Christophe Benoît](https://github.com/cjayneb) si vous voulez vérifier votre déploiement de développement.
 
 Cependant, il est aussi possible de faire un déploiement manuel du code poussé de votre branche actuelle en suivant les étapes suivantes :
 
