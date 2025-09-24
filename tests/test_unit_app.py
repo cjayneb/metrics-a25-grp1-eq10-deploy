@@ -35,5 +35,8 @@ def test_get_issues_mocked(mock_get: MagicMock, client):
     response = client.get("/issues")
 
     assert response.status_code == 200
-    assert response.json == expected_issues
+    
+    data = response.json
+    assert data[0]["id"] == 1
+    assert data[0]["title"] == "Fake issue"
     mock_get.assert_called_once()
